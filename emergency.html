@@ -12,8 +12,8 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="emergency.html">In an Emergency</a>
-      <a href="#regions">Regions</a>
-      <a href="#contact">Contact</a>
+      <a href="#region-content">Regions</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
   </header>
 
@@ -21,47 +21,46 @@
     <section id="emergency-page">
       <h2>In an Emergency</h2>
       <p>If you suspect a heart attack, take immediate action. Call the emergency number for your region and follow the steps below.</p>
-      
+
       <div class="region-selection">
         <p>Select your region:</p>
         <div class="region-buttons">
           <button onclick="showRegion('uk')">UK</button>
           <button onclick="showRegion('us')">USA/Canada</button>
-          <button onclick="showRegion('eu')">EU</button>
+          <button onclick="showRegion('eu')">Europe</button>
         </div>
       </div>
 
       <div id="region-content">
-        <div id="uk" class="region-info" style="display:block;">
+        <div id="uk" class="region">
           <h3>United Kingdom</h3>
-          <p>Dial <strong>999</strong> immediately.</p>
-          <p>If you are not allergic and have no contraindications, chew one 300 mg aspirin tablet while waiting for the ambulance. Always follow local medical advice.</p>
+          <p>Call <strong>999</strong> immediately and ask for an ambulance. If the person is not allergic to aspirin and has no history of bleeding issues, the operator may advise giving them a 300 mg aspirin tablet to chew while waiting for the ambulance. If they are on anticoagulant medication or have been told not to take aspirin, do not administer it.</p>
         </div>
-        <div id="us" class="region-info" style="display:none;">
+
+        <div id="us" class="region">
           <h3>United States & Canada</h3>
-          <p>Dial <strong>911</strong> immediately.</p>
-          <p>The emergency operator may advise taking aspirin (160–325 mg chewable) if appropriate. Do not self-administer unless instructed.</p>
+          <p>Call <strong>911</strong> immediately for an ambulance. The operator may recommend chewing one uncoated adult aspirin (usually 325 mg) or up to four low-dose (81 mg) tablets if the person is not allergic and has no contraindications. Do not delay calling 911 to search for aspirin, and follow the emergency dispatcher's instructions.</p>
         </div>
-        <div id="eu" class="region-info" style="display:none;">
+
+        <div id="eu" class="region">
           <h3>European Union</h3>
-          <p>Dial <strong>112</strong> immediately.</p>
-          <p>Guidance varies by country. Contact emergency services first; they may advise on aspirin use.</p>
+          <p>Call <strong>112</strong> immediately. Guidance on aspirin during a suspected heart attack may vary by country. Always follow the advice of the emergency operator or local health authority. Do not give aspirin if the person is allergic or has been advised against its use.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 GetHeartSmart. All rights reserved.</p>
-  </footer>
-
   <script>
     function showRegion(region) {
-      var regions = ['uk','us','eu'];
-      regions.forEach(function(r) {
-        document.getElementById(r).style.display = (r === region) ? 'block' : 'none';
+      var regions = document.querySelectorAll('#region-content .region');
+      regions.forEach(function(el) {
+        el.style.display = 'none';
       });
+      document.getElementById(region).style.display = 'block';
     }
+    document.addEventListener('DOMContentLoaded', function() {
+      showRegion('uk');
+    });
   </script>
 </body>
 </html>
