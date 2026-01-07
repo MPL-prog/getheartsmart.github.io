@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In an Emergency | GetHeartSmart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>GetHeartSmart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="emergency.html">In an Emergency</a>
+      <a href="#regions">Regions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="emergency-page">
+      <h2>In an Emergency</h2>
+      <p>If you suspect a heart attack, take immediate action. Call the emergency number for your region and follow the steps below.</p>
+      
+      <div class="region-selection">
+        <p>Select your region:</p>
+        <div class="region-buttons">
+          <button onclick="showRegion('uk')">UK</button>
+          <button onclick="showRegion('us')">USA/Canada</button>
+          <button onclick="showRegion('eu')">EU</button>
+        </div>
+      </div>
+
+      <div id="region-content">
+        <div id="uk" class="region-info" style="display:block;">
+          <h3>United Kingdom</h3>
+          <p>Dial <strong>999</strong> immediately.</p>
+          <p>If you are not allergic and have no contraindications, chew one 300 mg aspirin tablet while waiting for the ambulance. Always follow local medical advice.</p>
+        </div>
+        <div id="us" class="region-info" style="display:none;">
+          <h3>United States & Canada</h3>
+          <p>Dial <strong>911</strong> immediately.</p>
+          <p>The emergency operator may advise taking aspirin (160–325 mg chewable) if appropriate. Do not self-administer unless instructed.</p>
+        </div>
+        <div id="eu" class="region-info" style="display:none;">
+          <h3>European Union</h3>
+          <p>Dial <strong>112</strong> immediately.</p>
+          <p>Guidance varies by country. Contact emergency services first; they may advise on aspirin use.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 GetHeartSmart. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showRegion(region) {
+      var regions = ['uk','us','eu'];
+      regions.forEach(function(r) {
+        document.getElementById(r).style.display = (r === region) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
