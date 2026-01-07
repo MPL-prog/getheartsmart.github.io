@@ -1,12 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetHeartSmart</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GetHeartSmart – Heart health education</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  color: #a4161a;
+  font-size: 1.8rem;
+}
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #a4161a;
+}
+section {
+  padding: 40px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+#hero {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 60px 20px;
+}
+#hero h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #a4161a;
+}
+#hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+.button-primary {
+  background-color: #a4161a;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.button-primary:hover {
+  background-color: #841212;
+}
+.button-secondary {
+  display: inline-block;
+  margin-top: 10px;
+  color: #a4161a;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+#emergency {
+  background-color: #fff;
+}
+#emergency h3 {
+  color: #a4161a;
+  margin-bottom: 20px;
+}
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+.emergency-item {
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+}
+.emergency-item h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+#learn h3 {
+  color: #a4161a;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+.card {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+.card a {
+  text-decoration: none;
+  color: #a4161a;
+  font-weight: bold;
+}
+#region-selection {
+  text-align: center;
+}
+.region-buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: 1px solid #a4161a;
+  background-color: #fff;
+  color: #a4161a;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.region-buttons button:hover {
+  background-color: #a4161a;
+  color: #fff;
+}
+#news h3 {
+  color: #a4161a;
+}
+#news ul {
+  list-style: none;
+  padding: 0;
+}
+#news li {
+  margin: 8px 0;
+}
+#future h3 {
+  color: #a4161a;
+}
+footer {
+  background-color: #f6f6f6;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+}
+footer a {
+  margin: 0 8px;
+  color: #a4161a;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+</style>
 </head>
 <body>
-    <h1>Welcome to GetHeartSmart</h1>
-    <p>This site is under construction. Stay tuned for heart health education and emergency guidance.</p>
+<header>
+  <h1>GetHeartSmart</h1>
+  <nav>
+    <a href="#learn">Learn</a>
+    <a href="#emergency">In an Emergency</a>
+    <a href="#regions">Regions</a>
+    <a href="#news">Research & News</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <h2>Heart health education.</h2>
+  <p>Clear guidance when it matters most. Trusted, region‑specific information on heart attacks and cardiovascular care.</p>
+  <a href="#learn" class="button-primary">Learn the signs of a heart attack</a><br>
+  <a href="#updates" class="button-secondary">Join our education updates list</a>
+</section>
+
+<section id="emergency">
+  <h3>Suspected heart attack? Act immediately.</h3>
+  <div class="emergency-grid">
+    <div class="emergency-item">
+      <h4>Call emergency services</h4>
+      <p>UK: 999 | US & Canada: 911 | EU: 112</p>
+    </div>
+    <div class="emergency-item">
+      <h4>Chew aspirin if advised</h4>
+      <p>Guidance varies by country. Always follow local emergency advice.</p>
+    </div>
+    <div class="emergency-item">
+      <h4>Do not drive yourself</h4>
+      <p>Wait for professional help.</p>
+    </div>
+    <div class="emergency-item">
+      <h4>Stay with the person</h4>
+      <p>Reassure them and monitor their condition.</p>
+    </div>
+  </div>
+  <p style="font-size:0.85rem; margin-top: 15px;">This information is educational and does not replace medical advice or emergency services.</p>
+</section>
+
+<section id="learn">
+  <h3>Learn about heart attacks and heart health</h3>
+  <div class="card-grid">
+    <div class="card"><a href="#">What is a heart attack?</a></div>
+    <div class="card"><a href="#">Warning signs and symptoms</a></div>
+    <div class="card"><a href="#">Aspirin use in emergencies</a></div>
+    <div class="card"><a href="#">Heart attack vs cardiac arrest</a></div>
+    <div class="card"><a href="#">Risk factors & prevention</a></div>
+  </div>
+</section>
+
+<section id="regions">
+  <h3>Guidance tailored to where you are</h3>
+  <div class="region-buttons">
+    <button>UK</button>
+    <button>USA</button>
+    <button>Canada</button>
+    <button>EU</button>
+  </div>
+</section>
+
+<section id="news">
+  <h3>Latest Research & News</h3>
+  <ul>
+    <li><a href="#">NHS guidance on heart attacks</a></li>
+    <li><a href="#">American Heart Association updates</a></li>
+    <li><a href="#">Heart & Stroke Foundation (Canada)</a></li>
+    <li><a href="#">European Society of Cardiology insights</a></li>
+  </ul>
+</section>
+
+<section id="future">
+  <h3>Supporting better emergency heart care</h3>
+  <p>We are developing tools designed to support faster, safer response during suspected heart attacks. Details will be shared when appropriate.</p>
+  <a href="#updates" class="button-primary">Join the education updates list</a>
+</section>
+
+<footer>
+  <a href="#">About</a> |
+  <a href="#contact">Contact Us</a> |
+  <a href="#">Privacy Policy</a> |
+  <a href="#">Cookie Preferences</a> |
+  <a href="#">Terms of Use</a> |
+  <a href="#">Data Sources</a> |
+  <a href="#">Medical Disclaimer</a>
+</footer>
 </body>
 </html>
