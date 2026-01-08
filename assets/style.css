@@ -15,8 +15,9 @@
   --colour-muted: #666666; /* Muted text */
   --spacing: 1rem;
   --radius: 0.3rem;
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
+  /* Swap to a serif font stack for an editorial feel */
+  font-family: 'Georgia', Cambria, 'Times New Roman', serif;
+  font-size: 17px;
   line-height: 1.5;
 }
 
@@ -34,10 +35,11 @@ h1, h2, h3, h4 {
   font-weight: bold;
   color: var(--colour-primary);
 }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.25rem; }
-h4 { font-size: 1rem; }
+/* Increase base heading sizes for a more premium look */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.1rem; }
 
 p {
   margin-bottom: 1rem;
@@ -110,8 +112,12 @@ main {
 
 /* Hero section */
 .hero {
-  background-color: var(--colour-secondary);
-  padding: 2rem 1rem;
+  /* Use the hero image with a dark overlay for contrast */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero.png');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 4rem 1rem;
   text-align: center;
 }
 .hero h1 {
@@ -163,8 +169,10 @@ main {
   background-color: var(--colour-background);
   border: 1px solid var(--colour-secondary);
   border-radius: var(--radius);
-  padding: 1rem;
+  padding: 1.25rem;
   height: 100%;
+  /* Add a subtle shadow for depth */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 .card h3 {
   margin-top: 0;
