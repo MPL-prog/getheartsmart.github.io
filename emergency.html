@@ -3,64 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>In an Emergency | GetHeartSmart</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>What to Do in an Emergency | GetHeartSmart</title>
+  <meta name="description" content="Find clear, region‑specific guidance on what to do if you suspect a heart attack. Learn when to call for help, how to support the person, and when aspirin may be advised.">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header>
-    <h1>GetHeartSmart</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="emergency.html">In an Emergency</a>
-      <a href="#region-content">Regions</a>
-      <a href="index.html#contact">Contact</a>
+    <a class="branding" href="index.html">GetHeartSmart</a>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="emergency.html" aria-current="page">In an Emergency</a></li>
+        <li><a href="uk.html">Regions</a></li>
+        <li><a href="research.html">Research &amp; News</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section id="emergency-page">
-      <h2>In an Emergency</h2>
-      <p>If you suspect a heart attack, take immediate action. Call the emergency number for your region and follow the steps below.</p>
+    <h1>In an Emergency</h1>
+    <p>If you suspect a heart attack, take immediate action. Call the emergency number for your region and follow the steps below. The information on this page is educational and does not replace professional medical advice.</p>
 
-      <div class="region-selection">
-        <p>Select your region:</p>
-        <div class="region-buttons">
-          <button onclick="showRegion('uk')">UK</button>
-          <button onclick="showRegion('us')">USA/Canada</button>
-          <button onclick="showRegion('eu')">Europe</button>
-        </div>
-      </div>
+    <h2 id="uk">United Kingdom</h2>
+    <p>Call <strong>999</strong> right away and ask for an ambulance. According to public first‑aid guidance:</p>
+    <ul>
+      <li>Stay calm and reassure the person. Encourage them to rest in a comfortable seated position.</li>
+      <li>Follow the operator’s instructions. They may advise giving a 300&nbsp;mg adult aspirin tablet to chew if the person is 16 or older, is not allergic and has no history of bleeding issues. Do <em>not</em> give aspirin if the person has been told not to take it.</li>
+      <li>If they have prescribed angina medication (such as glyceryl trinitrate spray), assist them in taking it.</li>
+      <li>Monitor their breathing and responsiveness. If they become unresponsive and are not breathing normally, start CPR and use an automated external defibrillator (AED) if available.</li>
+    </ul>
 
-      <div id="region-content">
-        <div id="uk" class="region">
-          <h3>United Kingdom</h3>
-          <p>Call <strong>999</strong> immediately and ask for an ambulance. If the person is not allergic to aspirin and has no history of bleeding issues, the operator may advise giving them a 300 mg aspirin tablet to chew while waiting for the ambulance. If they are on anticoagulant medication or have been told not to take aspirin, do not administer it.</p>
-        </div>
+    <h2 id="us">United States &amp; Canada</h2>
+    <p>Call <strong>911</strong> immediately for an ambulance. The American Red Cross advises:</p>
+    <ul>
+      <li>Have the person stop activity and rest in a comfortable position while you call for help.</li>
+      <li>If they are awake, able to chew or swallow and allowed to have aspirin, you may assist them to take <strong>one regular (325&nbsp;mg) aspirin</strong> or <strong>two to four low‑dose (81&nbsp;mg) tablets</strong>. Check that they are not allergic and have no contraindications.</li>
+      <li>Do not delay calling 911 to search for aspirin. Stay with the person until emergency medical services arrive.</li>
+      <li>Never drive the person to the hospital yourself. Ambulance crews can begin treatment en route.</li>
+      <li>Be prepared to provide CPR if they become unresponsive and are not breathing normally.</li>
+    </ul>
 
-        <div id="us" class="region">
-          <h3>United States & Canada</h3>
-          <p>Call <strong>911</strong> immediately for an ambulance. The operator may recommend chewing one uncoated adult aspirin (usually 325 mg) or up to four low-dose (81 mg) tablets if the person is not allergic and has no contraindications. Do not delay calling 911 to search for aspirin, and follow the emergency dispatcher's instructions.</p>
-        </div>
+    <h2 id="eu">European Union</h2>
+    <p>Call <strong>112</strong> immediately and explain that you suspect a heart attack. Guidance may vary by country; always follow the advice of the emergency operator or your local health authority. In general: </p>
+    <ul>
+      <li>Encourage the person to rest and loosen any tight clothing.</li>
+      <li>The operator may advise giving an adult dose of aspirin if the person is not allergic. Only administer medication under guidance.</li>
+      <li>Monitor their condition and be ready to start CPR if they become unresponsive and are not breathing.</li>
+    </ul>
 
-        <div id="eu" class="region">
-          <h3>European Union</h3>
-          <p>Call <strong>112</strong> immediately. Guidance on aspirin during a suspected heart attack may vary by country. Always follow the advice of the emergency operator or local health authority. Do not give aspirin if the person is allergic or has been advised against its use.</p>
-        </div>
-      </div>
-    </section>
+    <p>For more general information on how to recognise a heart attack and reduce your risk, see our <a href="learn.html">Learn</a> page.</p>
   </main>
 
-  <script>
-    function showRegion(region) {
-      var regions = document.querySelectorAll('#region-content .region');
-      regions.forEach(function(el) {
-        el.style.display = 'none';
-      });
-      document.getElementById(region).style.display = 'block';
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-      showRegion('uk');
-    });
-  </script>
+  <footer>
+    <p>&copy; 2026 GetHeartSmart. For educational purposes only – not a substitute for professional medical advice.</p>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms of Use</a> |
+      <a href="data-sources.html">Data Sources</a> |
+      <a href="disclaimer.html">Medical Disclaimer</a>
+    </p>
+  </footer>
 </body>
 </html>
