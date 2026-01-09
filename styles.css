@@ -128,7 +128,8 @@ img {
 }
 
 .logo img {
- height: 64px;;
+  /* Increase logo height to create stronger brand presence in the header */
+  height: 150px;
   width: auto;
 }
 
@@ -160,7 +161,8 @@ img {
   min-height: 60vh;
   padding-block: var(--spacing-xl);
   color: white;
-  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/hero.png');
+  /* Set hero background image from root instead of images folder */
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('hero.png');
   background-size: cover;
   background-position: center;
 }
