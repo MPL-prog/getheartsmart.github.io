@@ -128,8 +128,8 @@ img {
 }
 
 .logo img {
-  /* Increase logo height to create stronger brand presence in the header */
-  height: 150px;
+  /* Further enlarge logo to fill the header area. 200px height keeps the aspect ratio and provides stronger brand presence */
+  height: 200px;
   width: auto;
 }
 
